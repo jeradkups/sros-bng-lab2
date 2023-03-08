@@ -7,7 +7,7 @@ mgmt:
 topology:
   kinds:
     vr-sros:
-      image: vrnetlab/vr-sros:22.07.R1
+      image: jeradkups/vr-sros:22.07.R1
       license: license-sros.txt
   nodes:
     bng1:
@@ -38,12 +38,12 @@ topology:
     ### CLIENTS ###
     client1:
       kind: linux
-      image: jeradkups/freeradius-server:1.1
+      image: jeradkups/freeradius-server:1.2
       mgmt_ipv4: 172.80.80.31
 
     client2:
       kind: linux
-      image: clab/bng-host:1.2
+      image: jeradkups/bng-host:1.0
       mgmt_ipv4: 172.80.80.32
 
   links:

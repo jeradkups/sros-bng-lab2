@@ -1,0 +1,20 @@
+all:
+  children:
+    linux:
+      hosts:
+        clab-sros-lab01-client1:
+          ansible_host: 172.80.80.31
+        clab-sros-lab01-client2:
+          ansible_host: 172.80.80.32
+    vr-sros:
+      hosts:
+        clab-sros-lab01-agg1:
+          ansible_host: 172.80.80.21
+        clab-sros-lab01-agg2:
+          ansible_host: 172.80.80.22
+        clab-sros-lab01-agg3:
+          ansible_host: 172.80.80.23
+        clab-sros-lab01-bng1:
+          ansible_host: 172.80.80.51
+        clab-sros-lab01-bng2:
+          ansible_host: 172.80.80.52

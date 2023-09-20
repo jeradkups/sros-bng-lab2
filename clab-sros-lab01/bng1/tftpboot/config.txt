@@ -3,7 +3,7 @@
 # Built on Tue Aug 2 14:18:47 PDT 2022 by builder in /builds/c/227B/R1/panos/main/sros
 # Configuration format version 22.7 revision 0
 
-# Generated TUE MAR 07 23:03:46 2023 UTC
+# Generated TUE SEP 19 22:05:43 2023 UTC
 
 exit all
 configure
@@ -301,6 +301,18 @@ echo "QoS Policy Configuration"
             queue 1 create
             exit
             queue 11 multipoint create
+            exit
+            policer 1 create
+                rate 50000 cir 1000
+            exit
+            fc "be" create
+                policer 1
+                in-remark dscp be
+            exit
+        exit
+        sap-egress 20 name "20" create
+            description "Internet"
+            queue 1 create
             exit
         exit
     exit
@@ -834,4 +846,4 @@ echo "System Configuration Mode Configuration"
 
 exit all
 
-# Finished TUE MAR 07 23:03:46 2023 UTC
+# Finished TUE SEP 19 22:05:43 2023 UTC

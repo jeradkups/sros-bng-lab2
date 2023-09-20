@@ -7,7 +7,7 @@ mgmt:
 topology:
   kinds:
     vr-sros:
-      image: jeradkups/vr-sros:22.07.R1
+      image: jeradkups/vr-sros:23.07.R2
       license: license-sros.txt
   nodes:
     bng1:
